@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="cs.postalert.MainActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="81dp"
+            android:layout_height="39dp"
+            android:layout_gravity="top|bottom|end"
+            android:layout_margin="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:elevation="24dp"
+            android:onClick="delete"
+            android:shadowColor="@android:color/holo_green_dark"
+            android:soundEffectsEnabled="true"
+            android:text="delete"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/background_light"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="288dp"/>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="219dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:autoText="false"
+            android:backgroundTint="@color/colorPrimary"
+            android:editable="false"
+            android:elevation="24dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Notifications"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="@android:color/holo_green_dark"
+            android:textColorHint="@android:color/holo_green_dark"
+            android:textColorLink="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="3dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Source Number"
+            android:textColor="@color/colorPrimary"
+            android:textColorLink="@android:color/holo_green_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/list" />
+
+        <Button
+            android:id="@+id/addNumber"
+            android:layout_width="81dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:text="Add"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list"
+            app:layout_constraintVertical_bias="0.55" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="329dp"
+            android:layout_height="382dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="8"
+            android:background="@android:color/background_light"
+            android:scrollbarSize="?android:attr/actionBarSize"
+            android:splitMotionEvents="true"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintLeft_toLeftOf="@+id/edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
